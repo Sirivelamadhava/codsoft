@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+/* Navbar Styling */
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 1.5em;
+    }
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
+        font-size: 1.5em;
+    }
+}
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+#about {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+#about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#about h2 {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+#skills {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.skills-content, .skills-image {
+    width: 50%; /* Each occupies 50% */
+}
+
+.skills-content {
+    padding: 20px;
+    background: #e2e2e2;
+}
+
+.skills-container {
+    position: relative;
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+.skills-image {
+    position: relative;
+    background-image: url("skill.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px; /* Adjust as needed */
+    overflow: hidden; /* Ensure content doesn't spill over */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* No blur on the container itself */
+}
+
+.skills-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("skill.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    z-index: 0; /* Ensure the blur effect is behind the text */
+}
+
+.skills-text {
+    color: rgb(204, 121, 12); /* Adjust text color as needed */
+    font-size: 3rem; /* Adjust text size as needed */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+    position: relative; /* Relative positioning within the parent */
+    z-index: 1; /* Ensure text is on top of the blurred background */
+}
+
+.skills-image:hover .skills-text {
+    opacity: 1; /* Show text on hover */
+    transform: scale(1.1); /* Slightly scale up text */
+}
+
+
+#projects {
+    padding: 20px;
+    background: #fff;
+}
+
+#projects h2 {
+    text-align: center;
+}
+
+.project {
+    margin: 20px 0;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+#resume {
+    padding: 20px;
+    background: #e2e2e2;
+    text-align: center;
+}
+
+#resume a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+    border: 2px solid #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#contact {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+#contact a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+

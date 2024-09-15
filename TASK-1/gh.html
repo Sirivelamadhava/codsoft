@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="skills-image">
+        <h1 class="skills-text">Skills</h1>
+    </div>
+<style>
+    .skills-image {
+    position: relative;
+    background-image: url("skill.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px; /* Adjust as needed */
+    overflow: hidden; /* Ensure content doesn't spill over */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* No blur on the container itself */
+}
+
+.skills-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("skill.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    z-index: 0; /* Ensure the blur effect is behind the text */
+}
+
+.skills-text {
+    color: rgb(17, 4, 4); /* Adjust text color as needed */
+    font-size: 3rem; /* Adjust text size as needed */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transitions */
+    position: relative; /* Relative positioning within the parent */
+    z-index: 1; /* Ensure text is on top of the blurred background */
+}
+
+.skills-image:hover .skills-text {
+    opacity: 1; /* Show text on hover */
+    transform: scale(1.1); /* Slightly scale up text */
+}
+
+</style>    
+</body>
+</html>
